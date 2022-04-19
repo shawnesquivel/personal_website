@@ -1,0 +1,233 @@
+@import "config";
+@import "utilities";
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $dark-color;
+  color: $light-color;
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+ul {
+  display: flex;
+  li {
+    list-style: none;
+    padding: 0 1rem;
+  }
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+  color: $light-color;
+  font-size: 1.2rem;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: transparent;
+  // position: fixed;
+  background: #333;
+  transition: 0.5s;
+}
+
+.navbar.top {
+  background: transparent;
+}
+
+#header-home {
+  padding: 1rem 4rem;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg-image {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: auto;
+  filter: blur(2px);
+}
+
+#home {
+  //Section A: Title Block
+  &-a {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    .main-title {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+  //Section B: About Me Section
+  &-b {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+      overflow: hidden;
+    }
+    .about-me {
+      max-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .portrait {
+      display: flex;
+      align-items: center;
+    }
+    .h1 {
+      line-height: 1;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+
+    img {
+      height: 600px;
+      width: auto;
+      margin: auto;
+    }
+  }
+  // Section C: Previous Projects
+  &-c {
+    background: $light-color;
+    color: $dark-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 1.6rem;
+    }
+    .btn-dark {
+      margin: 2rem;
+    }
+  }
+  // Home D: Let Me Find Your Brand Identity
+  &-d {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .fixed-text-top {
+      position: absolute;
+      top: 60px;
+      left: 60px;
+      font-size: 3rem;
+    }
+    .fixed-text-bottom {
+      position: absolute;
+      bottom: 60px;
+      right: 60px;
+      font-size: 3rem;
+      text-align: right;
+    }
+    .brand-identity {
+      height: 100%;
+      position: relative;
+      background-image: url("laptop.jpeg");
+    }
+  }
+  // Home E: My Promise To You
+  &-e {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .btn-light {
+      margin-top: 2.5rem;
+    }
+  }
+  // Home F: Contact Form
+  &-f {
+    .container {
+      background: url(/dist/img/laptop.jpeg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
+    }
+    form {
+      width: 30%;
+      overflow: hidden;
+    }
+    input[type="submit"] {
+      margin-left: 40%;
+    }
+    label[for="name"],
+    label[for="email"],
+    label[for="message"] {
+      align-self: left;
+      text-transform: uppercase;
+      font-style: italic;
+      font-size: 1.5rem;
+    }
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      margin: 15px 0;
+      font-size: 1.3rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    // Checkboxes
+    input[type="checkbox"] {
+      padding: 100px;
+      cursor: pointer;
+      transform: scale(1.8);
+    }
+    label[for="service-1"],
+    label[for="service-2"],
+    label[for="service-3"] {
+      font-size: 1.2rem;
+      padding: 15px;
+    }
+  }
+}

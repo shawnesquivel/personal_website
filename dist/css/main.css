@@ -1,0 +1,260 @@
+.uppercase {
+  font-style: italic; }
+
+.main-title {
+  font-size: 6rem; }
+
+.current {
+  color: #affecd; }
+
+.primary-color {
+  color: #affecd; }
+
+.text-center {
+  text-align: center; }
+
+.btn-light, .btn-dark {
+  border: none;
+  display: inline-block;
+  padding: 15px 35px;
+  background: #fffaf5;
+  color: #01141c;
+  font-size: 1.1rem;
+  font-style: italic;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+  margin-bottom: 15px; }
+
+.btn-light:hover {
+  background: #affecd;
+  color: #01141c;
+  cursor: pointer; }
+
+.pages a {
+  position: relative;
+  padding-bottom: 0.7rem; }
+  .pages a::after {
+    content: "";
+    position: absolute;
+    height: 0.175rem;
+    background: #affecd;
+    cursor: pointer;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    transition: 0.25s ease-in;
+    transform: scale(0, 1); }
+  .pages a:hover {
+    color: #affecd; }
+    .pages a:hover::after {
+      transform: scale(1, 1); }
+
+.pages .current::after {
+  transform: scale(1, 1); }
+
+.btn-dark {
+  background: #01141c;
+  color: #fffaf5; }
+  .btn-dark:hover {
+    background: #affecd;
+    color: #01141c;
+    cursor: pointer; }
+
+.py-3 {
+  padding: 4rem 4rem; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background: #01141c;
+  color: #fffaf5;
+  line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box; }
+
+ul {
+  display: flex; }
+  ul li {
+    list-style: none;
+    padding: 0 1rem; }
+
+p {
+  font-size: 1.4rem; }
+
+a {
+  text-decoration: none;
+  color: #fffaf5;
+  font-size: 1.2rem; }
+
+img {
+  width: 100%; }
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  font-style: italic; }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background: transparent;
+  background: #333;
+  transition: 0.5s; }
+
+.navbar.top {
+  background: transparent; }
+
+#header-home {
+  padding: 1rem 4rem;
+  height: 100vh;
+  overflow: hidden;
+  position: relative; }
+
+.bg-image {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: auto;
+  filter: blur(2px); }
+
+#home-a {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; }
+  #home-a .main-title {
+    line-height: 1;
+    margin-bottom: 1rem; }
+  #home-a p {
+    margin-bottom: 2rem; }
+
+#home-b .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  overflow: hidden; }
+
+#home-b .about-me {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#home-b .portrait {
+  display: flex;
+  align-items: center; }
+
+#home-b .h1 {
+  line-height: 1; }
+
+#home-b p {
+  margin-bottom: 1rem; }
+
+#home-b img {
+  height: 600px;
+  width: auto;
+  margin: auto; }
+
+#home-c {
+  background: #fffaf5;
+  color: #01141c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  #home-c .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.6rem; }
+  #home-c .btn-dark {
+    margin: 2rem; }
+
+#home-d .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+#home-d .fixed-text-top {
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  font-size: 3rem; }
+
+#home-d .fixed-text-bottom {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  font-size: 3rem;
+  text-align: right; }
+
+#home-d .brand-identity {
+  height: 100%;
+  position: relative;
+  background-image: url("laptop.jpeg"); }
+
+#home-e .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+#home-e .btn-light {
+  margin-top: 2.5rem; }
+
+#home-f .container {
+  background: url(/dist/img/laptop.jpeg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box; }
+
+#home-f form {
+  width: 30%;
+  overflow: hidden; }
+
+#home-f input[type="submit"] {
+  margin-left: 40%; }
+
+#home-f label[for="name"],
+#home-f label[for="email"],
+#home-f label[for="message"] {
+  align-self: left;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 1.5rem; }
+
+#home-f input[type="text"],
+#home-f textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  margin: 15px 0;
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif; }
+
+#home-f input[type="checkbox"] {
+  padding: 100px;
+  cursor: pointer;
+  transform: scale(1.8); }
+
+#home-f label[for="service-1"],
+#home-f label[for="service-2"],
+#home-f label[for="service-3"] {
+  font-size: 1.2rem;
+  padding: 15px; }

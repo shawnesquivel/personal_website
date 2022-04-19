@@ -1,0 +1,90 @@
+// Utility Classes
+// 1 - Fonts
+.uppercase {
+  font-style: italic;
+}
+
+.main-title {
+  font-size: 6rem;
+}
+.current {
+  color: $primary-color;
+}
+
+.primary-color {
+  color: $primary-color;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// 2 - Buttons
+// Default
+%btn-shared {
+  border: none;
+  display: inline-block;
+  padding: 15px 35px;
+  background: $light-color;
+  color: $dark-color;
+  font-size: 1.1rem;
+  font-style: italic;
+  text-transform: uppercase;
+  transition-duration: 0.3s;
+  margin-bottom: 15px;
+}
+
+.btn-light {
+  @extend %btn-shared;
+  &:hover {
+    background: $primary-color;
+    color: $dark-color;
+    cursor: pointer;
+  }
+}
+
+.pages {
+  a {
+    position: relative;
+    padding-bottom: 0.7rem;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 0.175rem;
+      background: $primary-color;
+      cursor: pointer;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      transition: 0.25s ease-in;
+      transform: scale(0, 1);
+    }
+    &:hover {
+      color: $primary-color;
+      &::after {
+        transform: scale(1, 1);
+      }
+    }
+  }
+  .current {
+    &::after {
+      transform: scale(1, 1);
+    }
+  }
+}
+
+.btn-dark {
+  @extend %btn-shared;
+  background: $dark-color;
+  color: $light-color;
+  &:hover {
+    background: $primary-color;
+    color: $dark-color;
+    cursor: pointer;
+  }
+}
+
+// 3 - Padding
+.py-3 {
+  padding: 4rem 4rem;
+}
