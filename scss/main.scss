@@ -116,6 +116,9 @@ h4 {
     .h1 {
       line-height: 1;
     }
+    .medium-title {
+      font-size: 2rem;
+    }
     p {
       margin-bottom: 1rem;
     }
@@ -185,7 +188,7 @@ h4 {
   // Home F: Contact Form
   &-f {
     .container {
-      background: url(/dist/img/laptop.jpeg);
+      background: url("website.jpeg");
       display: flex;
       flex-direction: column;
       justify-content: center;
